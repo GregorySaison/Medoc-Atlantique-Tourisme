@@ -11,14 +11,14 @@ function Form({ onChange, onSubmit, inputValue }) {
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form className="leftBoard__form" onSubmit={handleSubmit}>
       <input
-        className="form__input"
+        className="leftBoard__form-input"
         type="number"
         value={inputValue}
         onChange={handleInputChange}
       ></input>
-      <button className="form__button" type="submit">
+      <button className="leftBoard__form-button" type="submit">
         MAJ
       </button>
     </form>

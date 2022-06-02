@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-import Form from "./../Form";
+import Illustration from "../Illustration";
+import Form from "../Form";
 
 import "./app.css";
 
@@ -21,12 +22,20 @@ function App() {
       <header className="header">
         <h1 className="header__title">Pollution des Plages</h1>
       </header>
-      <Form
-        inputValue={input}
-        onChange={handleChangeInput}
-        onSubmit={handleSubmit}
-      />
-      <h1>{rate}</h1>
+      <main className="main">
+        <section className="main__leftBoard">
+          <Form
+            inputValue={input}
+            onChange={handleChangeInput}
+            onSubmit={handleSubmit}
+          />
+          <h2 className="leftBoard__city">Lacanau</h2>
+          <h3 className="leftBoard__rate">{rate} %</h3>
+        </section>
+        <section className="main__rightBoard">
+          <Illustration data={rate} />
+        </section>
+      </main>
     </>
   );
 }

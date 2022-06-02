@@ -1,8 +1,42 @@
 .header {
     width: 100%;
-    text-align: center;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
 .header__title {
     font-size: 2rem;
+}
+
+.main {
+    width: 100%;
+    height: 60%;
+    display: flex;
+}
+
+.main__leftBoard {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.leftBoard__city {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.leftBoard__rate {
+    font-size: 3rem;
+}
+
+.main__rightBoard {
+    width: 50%;
+    height: 100%;
+    margin-right: 2rem;
 }

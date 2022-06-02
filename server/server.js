@@ -2,7 +2,7 @@ const express = require("express");
 const router = require("./router");
 
 const server = express();
-const port = process.env.PORT ?? 3000;
+const port = process.env.PORT ?? 3002;
 
 server.use(router);
 

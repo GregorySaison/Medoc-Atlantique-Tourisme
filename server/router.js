@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const displayController = require("./controllers/displayController");
 
-router.get("/", (__, res) => {
-  res.send("Hello World !");
-}); // Route API a définir
+router.get("/", displayController.getHourtin);
 
 module.exports = router;

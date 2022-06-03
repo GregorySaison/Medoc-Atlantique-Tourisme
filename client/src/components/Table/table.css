@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Big Noodle';
+    src: url("./../../assets/fonts/big_noodle_titling.ttf");
+}
+
+.footer__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__listItem {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E83F85;
+    font-size: 1rem;
+    font-family: 'Big Noodle';
+    color: #FFFFFF;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+

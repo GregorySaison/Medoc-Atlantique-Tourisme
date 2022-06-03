@@ -1,7 +1,7 @@
 const location = [
   {
     id: 1,
-    city: "Hourtin",
+    name: "Hourtin",
     rate: 20,
   },
 ];

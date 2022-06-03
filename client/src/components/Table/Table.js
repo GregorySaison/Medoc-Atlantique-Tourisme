@@ -4,21 +4,35 @@ import "./table.css";
 import Api from "./../../utils/baseUrl";
 
 function Table() {
-  const [cities, setCities] = useState([]);
+  const [name, setName] = useState("");
+  const [rate, setRate] = useState(0);
+  const [others, setOthers] = useState([]);
 
   useEffect(() => {
     Api.get("/hourtin").then((res) => {
       const response = res.data;
-      setCities(response);
+      setName(response[0].name);
+      setRate(response[0].rate);
+    });
+  }, []);
+
+  useEffect(() => {
+    Api.get("/others").then((res) => {
+      const response = res.data;
+      setOthers(response);
     });
   }, []);
 
   return (
     <ul className="footer__list">
-      {cities.map((city) => (
-        <li key={city.id} className="footer__listItem">
-          <span className="listItem__name">{city.name}</span>
-          <span className="listItem__rate">{city.rate} %</span>
+      <li className="footer__listItem">
+        <span className="listItem__name">{name}</span>
+        <span className="listItem__rate">{rate} %</span>
+      </li>
+      {others.map((item) => (
+        <li key={item.name} className="footer__listItem">
+          <span className="listItem__name">{item.name}</span>
+          <span className="listItem__rate">{item.rate} %</span>
         </li>
       ))}
     </ul>

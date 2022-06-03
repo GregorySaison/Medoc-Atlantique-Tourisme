@@ -38,6 +38,7 @@
     margin-bottom: 1rem;
     font-family: 'Big Noodle';
     font-size: 3rem;
+    font-weight: bold;
     color: #E83F85;
 }
 
@@ -55,5 +56,5 @@
 
 .footer {
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }

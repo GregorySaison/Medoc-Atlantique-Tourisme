@@ -15,6 +15,7 @@
 .header__title {
     font-size: 2rem;
     font-family: 'Big Noodle';
+    font-weight: bold;
     color: #E83F85;
     padding-right: 2rem;
 }

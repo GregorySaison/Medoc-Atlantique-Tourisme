@@ -1,11 +1,26 @@
-.leftBoard__form-input {
-    margin-bottom: 3rem;
+@font-face {
+    font-family: 'Big Noodle';
+    src: url("./../../assets/fonts/big_noodle_titling.ttf");
+}
+
+.leftBoard__form {
+    display: none;
 }
 
 .leftBoard__form--open {
     display: block;
 }
 
-.leftBoard__form {
-    display: none;
+.leftBoard__form-input {
+    font-family: 'Big Noodle';
+    margin-bottom: 3rem;
+    border: 2px solid #E83F85;
+}
+
+.leftBoard__form-button {
+    background-color: #E83F85;
+    color: #FFFFFF;
+    border: none;
+    margin-left: 0.5rem;
+    font-family: 'Big Noodle';
 }

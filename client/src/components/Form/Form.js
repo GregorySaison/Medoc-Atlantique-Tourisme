@@ -1,6 +1,6 @@
 import "./form.css";
 
-function Form({ onChange, onSubmit, inputValue }) {
+function Form({ isOpen, onChange, onSubmit, inputValue }) {
   const handleInputChange = (event) => {
     onChange(event.target.value);
   };
@@ -11,7 +11,10 @@ function Form({ onChange, onSubmit, inputValue }) {
   };
 
   return (
-    <form className="leftBoard__form" onSubmit={handleSubmit}>
+    <form
+      className={isOpen ? "leftBoard__form--open" : "leftBoard__form"}
+      onSubmit={handleSubmit}
+    >
       <input
         className="leftBoard__form-input"
         type="number"

@@ -1,3 +1,11 @@
 .leftBoard__form-input {
     margin-bottom: 3rem;
 }
+
+.leftBoard__form--open {
+    display: block;
+}
+
+.leftBoard__form {
+    display: none;
+}

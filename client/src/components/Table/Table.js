@@ -8,16 +8,16 @@ function Table() {
   const [rate, setRate] = useState(0);
   const [others, setOthers] = useState([]);
 
-  useEffect(() => {
-    Api.get("/hourtin").then((res) => {
-      const response = res.data;
-      setName(response[0].name);
-      setRate(response[0].rate);
-    });
-  }, []);
+  // useEffect(() => {
+  //   Api.get("/hourtin").then((res) => {
+  //     const response = res.data;
+  //     setName(response[0].name);
+  //     setRate(response[0].rate);
+  //   });
+  // }, []);
 
   useEffect(() => {
-    Api.get("/others").then((res) => {
+    Api.get("/city").then((res) => {
       const response = res.data;
       setOthers(response);
     });
@@ -25,10 +25,10 @@ function Table() {
 
   return (
     <ul className="footer__list">
-      <li className="footer__listItem">
+      {/* <li className="footer__listItem">
         <span className="listItem__name">{name}</span>
         <span className="listItem__rate">{rate} %</span>
-      </li>
+      </li> */}
       {others.map((item) => (
         <li key={item.name} className="footer__listItem">
           <span className="listItem__name">{item.name}</span>

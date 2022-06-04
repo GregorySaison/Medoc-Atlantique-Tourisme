@@ -1,13 +1,13 @@
 BEGIN;
 
-DROP TABLE IF EXISTS "cities";
+DROP TABLE IF EXISTS "Cities";
 
-CREATE TABLE IF NOT EXISTS "cities" (
+CREATE TABLE IF NOT EXISTS "Cities" (
     "id" integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "name" varchar(255) NOT NULL DEFAULT '',
     "rate" integer,
-    "created_at" timestamptz NOT NULL DEFAULT NOW(),
-    "updated_at" timestamptz
+    "createdAt" timestamptz NOT NULL DEFAULT NOW(),
+    "updatedAt" timestamptz
 );
 
 COMMIT;

@@ -6,7 +6,7 @@ import turquoise from "./../../assets/img/turquoise.jpg";
 function Illustration({ data }) {
   if (data <= 20) {
     return (
-      <img className="main__rightBoard-pic" src={pollution} alt="eau polluée" />
+      <img className="main__rightBoard-pic" src={turquoise} alt="eau polluée" />
     );
   } else if (data > 20 && data < 80) {
     return (
@@ -18,7 +18,7 @@ function Illustration({ data }) {
     );
   } else {
     return (
-      <img className="main__rightBoard-pic" src={turquoise} alt="eau claire" />
+      <img className="main__rightBoard-pic" src={pollution} alt="eau claire" />
     );
   }
 }

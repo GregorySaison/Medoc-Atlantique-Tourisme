@@ -15,4 +15,14 @@ body {
   background-color: #FFFFFF;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 1rem;
+  animation: display 3000ms ease-in;
+}
+
+@keyframes display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

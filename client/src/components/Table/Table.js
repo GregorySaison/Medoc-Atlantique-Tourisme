@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import Bar from "../Bar/Bar";
+
 import "./table.css";
 import Api from "./../../utils/baseUrl";
 
@@ -16,10 +18,7 @@ function Table() {
   return (
     <ul className="footer__list">
       {others.map((item) => (
-        <li key={item.name} className="footer__listItem">
-          <span className="listItem__name">{item.name}</span>
-          <span className="listItem__rate">{item.rate} %</span>
-        </li>
+        <Bar city={item} />
       ))}
     </ul>
   );

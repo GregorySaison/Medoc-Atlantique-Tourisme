@@ -17,7 +17,7 @@ function Table() {
   // }, []);
 
   useEffect(() => {
-    Api.get("/city").then((res) => {
+    Api.get("/cities").then((res) => {
       const response = res.data;
       setOthers(response);
     });

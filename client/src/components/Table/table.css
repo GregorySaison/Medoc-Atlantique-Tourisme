@@ -23,3 +23,12 @@
     border-radius: 0.5rem;
 }
 
+.footer__title {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Big Noodle';
+    padding-left: 1rem;
+    color: #E83F85;
+    font-weight: bold;
+}
+

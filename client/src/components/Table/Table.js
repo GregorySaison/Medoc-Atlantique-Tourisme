@@ -16,11 +16,14 @@ function Table() {
   }, []);
 
   return (
-    <ul className="footer__list">
-      {others.map((item) => (
-        <Bar city={item} />
-      ))}
-    </ul>
+    <>
+      <h3 className="footer__title">Villes alentours</h3>
+      <ul className="footer__list">
+        {others.map((item) => (
+          <Bar city={item} />
+        ))}
+      </ul>
+    </>
   );
 }
 

@@ -13,6 +13,7 @@
 - **[Etudes](#etudes)**
   - [Enoncé](#enoncé)
   - [Scénario](#scénario)
+- **[Reste à faire](#raf)**
 - **[Remarques](#remarques)**
 
 ---
@@ -27,7 +28,7 @@ _Ainsi, je pouvais alors mettre en avant mes compétences à la fois technique d
 
 ## **Guide d'utilisation** <a class="anchor" id="guide"></a>
 
-### **Clonage du repo Git** <a class="anchor" id="etudes"></a>
+### **Clonage du repo Git** <a class="anchor" id="git"></a>
 
 Ouvrez un terminal sur votre poste de travail et placez le à l'endroit voulu. Entrez alors la commande suivante :
 
@@ -102,6 +103,20 @@ $ npm run start
 ```
 
 Une page devrait alors s'ouvrir, laissant apparaître l'application.
+
+### **Modification taux de pollution Lacanau** <a class="anchor" id="lacanau"></a>
+
+Bien conscient que le taux de pollution des eaux de Lacanau peut être régulièrement variant d'un jour à l'autre, nous avons inclus au sein de l'application un bouton en haut à droite de l'écran.
+
+En appuyant sur ce dernier, vous ferez alors apparaître à l'écran un formulaire vous permettant de choisir une nouvelle valeur de pollution qui une fois soumise sera inscrite au sein de l'application.
+
+Vous n'aurez alors plus qu'à cliquez de nouveau sur le bouton pour faire disparaître le formulaire de l'écran.
+
+### **Modification villes alentours** <a class="anchor" id="alentours"></a>
+
+Si vous souhaitez modifier les intitulés ou les taux de pollution respectif des villes alentours de Lacanau, vous devez le faire directement via le fichier create_data du projet.
+
+Une fois les modifications réalisées, il ne vous reste alors plus qu'à relancer le script sql create_table suivi de create_data pour avoir vos valeurs modifiées.
 
 ---
 

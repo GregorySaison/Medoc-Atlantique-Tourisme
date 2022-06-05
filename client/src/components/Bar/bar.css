@@ -1,0 +1,8 @@
+.footer__listItem-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #E83F85;
+    color: #FFFFFF;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+}

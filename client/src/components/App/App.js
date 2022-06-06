@@ -3,11 +3,11 @@ import { useState } from "react";
 import Illustration from "../Illustration";
 import Form from "../Form";
 import Table from "../Table";
+import Button from "../Button/Button";
 
 import "./app.css";
 
 import logo from "./../../assets/img/logo.png";
-import Button from "../Button/Button";
 
 function App() {
   const [input, setInput] = useState(0);

@@ -1,4 +1,5 @@
 import "./illustration.css";
+
 import pollution from "./../../assets/img/pollution.jpg";
 import average from "./../../assets/img/average.jpg";
 import turquoise from "./../../assets/img/turquoise.jpg";

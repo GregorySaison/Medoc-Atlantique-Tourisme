@@ -1,6 +1,7 @@
 import "./bar.css";
 
 function Bar({ city }) {
+  // Definition de la largeur de la barre en fonction du pourcentage de pollution de l'eau associé
   const progress = {
     width: `${city.rate}%`,
   };

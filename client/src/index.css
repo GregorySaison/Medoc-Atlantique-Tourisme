@@ -1,23 +1,30 @@
+@font-face {
+  font-family: 'Big Noodle';
+  src: url("./assets/fonts/big_noodle_titling.ttf");
+}
+
 body {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  font-size: 16px;
   background-color: #E83F85;
+  font-family: 'Big Noodle';
+  font-size: 16px;
+  overflow: hidden;
 }
 
 #root {
   width: 90%;
   height: 90%;
   background-color: #FFFFFF;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   animation: display 3000ms ease-in;
 }
 
+/* ANIMATION FONDU APP */
 @keyframes display {
   0% {
     opacity: 0;

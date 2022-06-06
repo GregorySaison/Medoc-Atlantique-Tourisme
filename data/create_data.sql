@@ -1,4 +1,4 @@
-BEGIN;
+BEGIN; -- Rollback 
 
 INSERT INTO "Cities" ("name", "rate") VALUES
 ('Hourtin', 20),

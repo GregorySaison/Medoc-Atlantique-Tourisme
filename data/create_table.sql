@@ -1,4 +1,4 @@
-BEGIN;
+BEGIN; -- Rollback 
 
 DROP TABLE IF EXISTS "Cities";
 

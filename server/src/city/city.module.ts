@@ -1,5 +1,6 @@
 import { Module } from "@nestjs/common";
 import { SequelizeModule } from '@nestjs/sequelize';
+
 import { City } from "./city.model";
 import { CityController } from './city.controller';
 import { CityService } from './city.service';

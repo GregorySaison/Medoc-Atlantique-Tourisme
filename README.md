@@ -1,5 +1,7 @@
 # **MEDOC ATLANTIQUE TOURISME**
 
+![rendu](./docs/ressources/rendu.gif)
+
 ## **Sommaire**
 
 - **[Introduction](#introduction)**

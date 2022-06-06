@@ -11,8 +11,11 @@
   - [Modification taux de pollution Lacanau](#lacanau)
   - [Modification villes alentours](#alentours)
 - **[Etudes](#etudes)**
-  - [Enoncé](#enoncé)
-  - [Scénario](#scénario)
+  - [Analyses préliminaires](#preliminaire)
+    - [Enoncé](#enoncé)
+    - [Scénario](#scénario)
+    - [Reflexions initiales](#reflexion)
+  - [Architecture générale](#generale)
 - **[Reste à faire](#raf)**
 - **[Remarques](#remarques)**
 
@@ -122,7 +125,9 @@ Une fois les modifications réalisées, il ne vous reste alors plus qu'à relanc
 
 ## **Etudes** <a class="anchor" id="etudes"></a>
 
-### **Enoncé** <a class="anchor" id="enoncé"></a>
+### **Analyses préliminaires** <a class="anchor" id="preliminaire"></a>
+
+#### **Enoncé** <a class="anchor" id="enoncé"></a>
 
 Je dois créer une interface web mono page qui renvoie l’affichage de qualité des eaux de Lacanau ainsi que de celle des plages voisines.
 
@@ -130,6 +135,32 @@ Un champ de saisie permet à l’utilisateur d'entrer une valeur de pollution le
 
 Une partie annexe de la page renvoie elle une liste des plages avoisinantes ainsi que leur taux de pollution d’eau respectif.
 
-### **Scénario** <a class="anchor" id="scénario"></a>
+Afin de réaliser l'application, je dois avant tout partir sur une élaboration d'api classique via Node et une relation avec un front en React. Vient par la suite une refactorisation de la partie back en NestJS.
+
+#### **Scénario** <a class="anchor" id="scénario"></a>
 
 L'office de tourisme de Lacanau m'a contacté. Alors que l'été se profile, cette dernière souhaite profiter de son écran pour afficher des données de pollution de l'eau de sa plage locale ainsi que celles des plages des villes avoisinante.
+
+#### **Reflexions initiales** <a class="anchor" id="reflexion"></a>
+
+A travers la lecture de l'énoncé et cette première mise en situation, on peut déjà en retirer plusieurs informations qui vont offrir une ligne directrice au projet.
+
+- **Office du tourisme de LACANAU :** Nous connaissons le client et nous connaissons la localisation du projet, à savoir au sein de l'office du tourisme de Lacanau. En ce sens, il apparaît logique de s'appuyer sur l'identité visuelle de ce dernier pour créer un rendu qui s'y adapte et ne dénote pas avec le reste de l'établissement.
+
+- **Utilisation sur ECRAN :** Au sein d'un office de tourisme, les écrans d'informations ne sont souvent pas destiné a un seul affichage. Généralement, on peut voir apparaître plusieurs affichages qui se succèdent les uns les autres. Notre application d'affichage de pollution pourrait alors faire partie d'un ensemble d'autres affichages différents. On peut alors imaginer une transition de fondu au cas où on aurait la possibilité de l'insérer dans un tel ensemble.
+
+- **PARAMETRAGE par agent :** On doit permettre la mise à jour des données au jour le jour par les agents de l'office de tourisme. Néanmoins cela ne doit pas se faire au détriment de la qualité du rendu sur écran. En ce sens on peut imaginer un formulaire de modification simpliste mais également avec une possibilité de masquer son affichage une fois la mise à jour effectué pour garder une qualité d'affichage optimale.
+
+### **Architecture Générale** <a class="anchor" id="generale"></a>
+
+![architecture générale](./docs/Sch%C3%A9ma.png)
+
+_L'application se divise en trois parties distinctes : Le Front, le Back et la Base de données._
+
+_Dans sa première version, la décomposition du back se fait a l'aide d'un serveur Express couplé a Node JS. La version finale et actuelle a elle évolué vers une solution en NestJS._
+
+_Afin de pouvoir faire fonctionner l'application, les deux parties Front et Back de cette dernière sont en marche sur deux ports différents, respectivement le port 3000 et le port 3002. L'implémentation du package cors au sein du paramétrage du serveur Express permet a la logique React d'être autorisé à entrer en relation avec la partie Back._
+
+_Cette partie Back interagit avec une base de données Postgres charger de renvoyer les informations ainsi qu'un fichier de config spécifiquement crée pour le ville d'Hourtin. Ces données sont accessibles via des routes définies. C'est sur ces routes que le Front effectue les requêtes pour récupérer les données._
+
+_Dans sa version finale, la base de données de l'application inclut Hourtin directement en son sein._

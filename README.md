@@ -18,7 +18,7 @@
     - [Scénario](#scénario)
     - [Reflexions initiales](#reflexion)
   - [Architecture générale](#generale)
-- **[Reste à faire](#raf)**
+  - [Décomposition front-end React](#front)
 - **[Remarques](#remarques)**
 
 ---
@@ -157,12 +157,24 @@ A travers la lecture de l'énoncé et cette première mise en situation, on peut
 
 ![architecture générale](./docs/Sch%C3%A9ma.png)
 
-_L'application se divise en trois parties distinctes : Le Front, le Back et la Base de données._
+L'application se divise en trois parties distinctes : Le Front, le Back et la Base de données.
 
-_Dans sa première version, la décomposition du back se fait a l'aide d'un serveur Express couplé a Node JS. La version finale et actuelle a elle évolué vers une solution en NestJS._
+Dans sa première version, la décomposition du back se fait a l'aide d'un serveur Express couplé a Node JS. La version finale et actuelle a elle évolué vers une solution en NestJS.
 
-_Afin de pouvoir faire fonctionner l'application, les deux parties Front et Back de cette dernière sont en marche sur deux ports différents, respectivement le port 3000 et le port 3002. L'implémentation du package cors au sein du paramétrage du serveur Express permet a la logique React d'être autorisé à entrer en relation avec la partie Back._
+Afin de pouvoir faire fonctionner l'application, les deux parties Front et Back de cette dernière sont en marche sur deux ports différents, respectivement le port 3000 et le port 3002. L'implémentation du package cors au sein du paramétrage du serveur Express permet a la logique React d'être autorisé à entrer en relation avec la partie Back.
 
-_Cette partie Back interagit avec une base de données Postgres charger de renvoyer les informations ainsi qu'un fichier de config spécifiquement crée pour le ville d'Hourtin. Ces données sont accessibles via des routes définies. C'est sur ces routes que le Front effectue les requêtes pour récupérer les données._
+Cette partie Back interagit avec une base de données Postgres charger de renvoyer les informations ainsi qu'un fichier de config spécifiquement crée pour le ville d'Hourtin. Ces données sont accessibles via des routes définies. C'est sur ces routes que le Front effectue les requêtes pour récupérer les données.
 
-_Dans sa version finale, la base de données de l'application inclut Hourtin directement en son sein._
+Dans sa version finale, la base de données de l'application inclut Hourtin directement en son sein.
+
+### **Décomposition front-end React** <a class="anchor" id="front"></a>
+
+![react](./docs/D%C3%A9coupage%20Front.png)
+
+### **Remarques** <a class="anchor" id="remarques"></a>
+
+_Au sein de l'énoncé fourni par l'entreprise, il était précisé qu'une valeur de 0 signifie une eau pollué tandis qu'une valeur de 100 signifie elle une eau claire._
+
+_Cependant, et face à l'incohérence du rendu, je me suis permis d'inversé le système de notation._
+
+_En effet, en suivant l'énoncé, je me retrouvais alors avec des annotation tels que "Pollution 0%" au sein du rendu de l'application mais avec une image correspondant a une eau pollué, résultant d'une incohérence._

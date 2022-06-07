@@ -19,6 +19,7 @@
     - [Reflexions initiales](#reflexion)
   - [Architecture générale](#generale)
   - [Décomposition front-end React](#front)
+  - [Design](#design)
 - **[Remarques](#remarques)**
 
 ---
@@ -170,6 +171,16 @@ Dans sa version finale, la base de données de l'application inclut Hourtin dire
 ### **Décomposition front-end React** <a class="anchor" id="front"></a>
 
 ![react](./docs/D%C3%A9coupage%20Front.png)
+
+### **Design** <a class="anchor" id="design"></a>
+
+Destiné à être utilisé au sein de l'office de tourisme de Lacanau et conscient de mes compétences limité en terme de design, j'ai donc décidé de suivre la chartre graphique de cet établissement. Afin de définir cette dernière, je me suis servi alors de leur site web https://www.medoc-atlantique.com/
+
+On y découvre une composante de couleur basé sur deux variations principale. Le blanc et le rose. Ce sont donc ces deux couleurs que j'ai utilisé au sein du projet.
+
+De plus, on retrouve une font majoritaire au sein des pages de leur site web, a savoir celle nommé Big Noodle. Après recherche, j'ai pu acquérir cette dernière qui est devenu la seule et unique font du projet.
+
+Enfin, que cela soit pour le logo ou encore de nombreux élements de leurs pages, on retrouve une composante d'arrondi sur les formes de ces derniers. Raison pour laquelle j'ai souhaité faire apparaître cela sur plusieurs élements de mon projet.
 
 ### **Remarques** <a class="anchor" id="remarques"></a>
 
